@@ -8,12 +8,23 @@ from arithmetic import *
 
 
 def operation():
-    inputs = raw_input("")
-    calc_data = inputs.split()
+    """
+    Takes input from user and returns list of input elements.
+    """
+    inputs = raw_input("> ")
+    calc_data = inputs.split(" ")
     return calc_data
 
 
 def calcing():
+    """
+    Creates prefix calculator.
+    
+    Takes list from operation(), uses the first element in the list as a key for
+     functions in the arithmetic module, and uses the 2nd and (optional) 3rd and 
+     4th elements as the arguments for the arithmetic functions. It also allows 
+     user to enter "q" or "quit" to exit the program.
+    """
     calc_data = operation()
     if calc_data == ['q'] or calc_data == ["quit"]:
         return
